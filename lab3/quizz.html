@@ -20,54 +20,64 @@
     <form action="#" method="POST">
         <!-- Área de dados pessoais -->
         <fieldset>
-            <legend>Dados Pessoais</legend>
+            <legend><b>Dados Pessoais</b></legend>
 
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required><br><br>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome" size="30" maxlength="50" autocomplete="on" autofocus><br><br>
 
             <label for="apelido">Apelido:</label>
-            <input type="text" id="apelido" name="apelido" required><br><br>
+            <input type="text" id="apelido" name="apelido" required placeholder="Digite seu apelido" size="30" maxlength="30" autocomplete="on"><br><br>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email" required placeholder="Digite seu email" size="30" maxlength="100" autocomplete="on"><br><br>
+
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento" required><br><br>
+
+            <label for="cor-favorita">Cor Favorita:</label>
+            <input type="color" id="cor-favorita" name="cor-favorita" required><br><br>
+
+            <label for="quantidade">Quantidade de Visitantes:</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" max="100" required placeholder="Digite a quantidade" step="1"><br><br>
+
         </fieldset>
 
         <!-- Área de perguntas sobre a cidade -->
         <fieldset>
             <legend><b>Quizz</b></legend>
-
             <p>1. Qual é o monumento mais famoso da cidade?</p>
-            <input type="text" name="monumento" placeholder="Escreva aqui...">
+            <input type="text" name="monumento" placeholder="Escreva aqui..." required maxlength="100">
 
             <p>2. Qual destes é o prato típico da cidade?</p>
-            <input type="radio" id="prato1" name="prato" value="A">
+            <input type="radio" id="prato1" name="prato" value="A" required>
             <label for="prato1">A) Feijoada</label>
-            <input type="radio" id="prato2" name="prato" value="B">
+            <input type="radio" id="prato2" name="prato" value="B" required>
             <label for="prato2">B) Bacalhau à Brás</label>
-            <input type="radio" id="prato3" name="prato" value="C">
+            <input type="radio" id="prato3" name="prato" value="C" required>
             <label for="prato3">C) Nenhuma das anteriores</label>
 
             <p>3. Em que ano a cidade foi fundada?</p>
-            <select name="ano-fundacao">
+            <select name="ano-fundacao" required>
                 <option value="1147">1147</option>
-                <option value="1187">1755</option>
+                <option value="1755">1755</option>
                 <option value="1848">1848</option>
             </select>
 
-            <p>4. Marque todas as atrações turísticas que já visitou em bragança:</p>
+            <p>4. Marque todas as atrações turísticas que já visitou em Bragança:</p>
             <input type="checkbox" id="torre" name="atracoes" value="Torre">
-            <label for="torre">Castelo de Bragança</label>
+            <label for="torre">Castelo de Bragança</label><br>
 
             <input type="checkbox" id="museu" name="atracoes" value="Museu">
-            <label for="museu">Clinica do Dr Paulo</label>
+            <label for="museu">Clinica do Dr Paulo</label><br>
 
             <input type="checkbox" id="mosteiro" name="atracoes" value="Mosteiro">
-            <label for="mosteiro">O Mercado</label>
+            <label for="mosteiro">O Mercado</label><br>
 
             <p>5. Em uma palavra, como descreveria a cidade?</p>
-            <input type="text" name="descricao" placeholder="Escreva aqui...">
+            <input type="text" name="descricao" placeholder="Escreva aqui..." required maxlength="50">
         </fieldset>
 
+        <input type="reset" value="Limpar Respostas">
         <input type="submit" value="Enviar Respostas">
     </form>
 
