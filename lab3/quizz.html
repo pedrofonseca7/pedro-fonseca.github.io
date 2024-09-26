@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bragança</title>
+</head>
+<body>
+
+    <h2>Quizz</h2>
+    <nav>
+        <a href="index.html">Home 🏠|</a>
+        <a href="local.html">Localização📍|</a>
+        <a href="multimedia.html">Multimédia 📷|</a>
+        <a href="info.html">Informação 📜|</a>
+        <a href="quizz.html">Quizz❓|</a>
+        <a href="viagem.html">Viagem ✈️</a>
+    </nav>
+
+    <form action="#" method="POST">
+        <!-- Área de dados pessoais -->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="apelido">Apelido:</label>
+            <input type="text" id="apelido" name="apelido" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+        </fieldset>
+
+        <!-- Área de perguntas sobre a cidade -->
+        <fieldset>
+            <legend><b>Quizz</b></legend>
+
+            <p>1. Qual é o monumento mais famoso da cidade?</p>
+            <input type="text" name="monumento" placeholder="Escreva aqui...">
+
+            <p>2. Qual destes é o prato típico da cidade?</p>
+            <input type="radio" id="prato1" name="prato" value="A">
+            <label for="prato1">A) Feijoada</label>
+            <input type="radio" id="prato2" name="prato" value="B">
+            <label for="prato2">B) Bacalhau à Brás</label>
+            <input type="radio" id="prato3" name="prato" value="C">
+            <label for="prato3">C) Nenhuma das anteriores</label>
+
+            <p>3. Em que ano a cidade foi fundada?</p>
+            <select name="ano-fundacao">
+                <option value="1147">1147</option>
+                <option value="1187">1755</option>
+                <option value="1848">1848</option>
+            </select>
+
+            <p>4. Marque todas as atrações turísticas que já visitou em bragança:</p>
+            <input type="checkbox" id="torre" name="atracoes" value="Torre">
+            <label for="torre">Castelo de Bragança</label>
+
+            <input type="checkbox" id="museu" name="atracoes" value="Museu">
+            <label for="museu">Clinica do Dr Paulo</label>
+
+            <input type="checkbox" id="mosteiro" name="atracoes" value="Mosteiro">
+            <label for="mosteiro">O Mercado</label>
+
+            <p>5. Em uma palavra, como descreveria a cidade?</p>
+            <input type="text" name="descricao" placeholder="Escreva aqui...">
+        </fieldset>
+
+        <input type="submit" value="Enviar Respostas">
+    </form>
+
+</body>
+</html>
