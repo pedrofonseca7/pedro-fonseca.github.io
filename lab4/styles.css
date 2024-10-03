@@ -1,0 +1,295 @@
+/* Definição geral da página */
+body {
+    font-family: 'Open Sans', sans-serif; /* Tipografia mais elegante */
+    background-color: #f7f7f7; /* Fundo claro suave */
+    color: #333; /* Cor de texto padrão */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #ff5722; /* Cor de fundo vibrante (laranja) */
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Título maior */
+    letter-spacing: 2px;
+    text-transform: uppercase; /* Maiúsculas para dar um toque mais profissional */
+}
+
+/* Estilo para a navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Fundo escuro para o menu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex; /* Organiza texto e ícones horizontalmente */
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    position: relative; /* Necessário para o efeito de hover */
+}
+
+nav ul li a:hover {
+    background-color: #ff5722; /* Muda para laranja no hover */
+    color: white;
+    border-radius: 25px;
+}
+
+nav ul li a span {
+    margin-left: 8px; /* Espaço entre o texto e o ícone */
+    font-size: 1.2rem; /* Aumenta o tamanho dos ícones */
+}
+
+/* Efeito de sublinhado personalizado ao passar o rato */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Personaliza as cores dos ícones */
+nav ul li a span.icon-home {
+    color: #ffeb3b; /* Ícone de casa - amarelo */
+}
+
+nav ul li a span.icon-location {
+    color: #ff4081; /* Ícone de localização - rosa */
+}
+
+nav ul li a span.icon-camera {
+    color: #03a9f4; /* Ícone de câmera - azul claro */
+}
+
+nav ul li a span.icon-info {
+    color: #ff9800; /* Ícone de informação - laranja */
+}
+
+nav ul li a span.icon-quiz {
+    color: #f44336; /* Ícone de quiz - vermelho */
+}
+
+nav ul li a span.icon-travel {
+    color: #9c27b0; /* Ícone de viagem - roxo */
+}
+
+
+/* Estilo para a galeria de imagens */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.gallery img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efeito de zoom */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+/* Estilo para a seção de conteúdo */
+.content {
+    background-color: #fff; /* Cor de fundo branco */
+    padding: 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px; /* Canto arredondado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ff5722; /* Cor viva para o título */
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555; /* Cor de texto suave */
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra no topo do rodapé */
+}
+
+/* Responsividade: Ajusta o layout em telas menores */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
+/* Efeito 3D nos links de navegação */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    perspective: 1000px; /* Cria a sensação de profundidade */
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+nav ul li a:hover {
+    transform: rotateY(15deg) rotateX(10deg) translateZ(10px); /* Efeito de rotação 3D ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra maior no hover */
+}
+
+/* Efeito de "pulsar" nas imagens da galeria */
+.gallery img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1) rotate(360deg); /* Gira 360 graus e aumenta de tamanho */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Animação maluca no título principal */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    animation: crazy 3s infinite; /* Aplica uma animação "maluca" */
+}
+
+/* Chaveframes para o efeito maluco do título */
+@keyframes crazy {
+    0% {
+        transform: rotate(0deg);
+        color: #ffeb3b; /* Amarelo */
+    }
+    25% {
+        transform: rotate(10deg) scale(1.1);
+        color: #ff5722; /* Laranja */
+    }
+    50% {
+        transform: rotate(-10deg) scale(0.9);
+        color: #03a9f4; /* Azul */
+    }
+    75% {
+        transform: rotate(5deg) scale(1.2);
+        color: #9c27b0; /* Roxo */
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+        color: white; /* Branco */
+    }
+}
+
+/* Efeito de profundidade no rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer:hover {
+    transform: translateZ(15px) rotateX(10deg); /* Move o rodapé "para frente" e inclina */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Efeito de "flutuação" na seção de conteúdo */
+.content {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out;
+}
+
+.content:hover {
+    transform: translateY(-10px); /* Faz a seção "flutuar" quando o rato passa sobre ela */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
