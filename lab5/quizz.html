@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bragança</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <h2>Quizz</h2>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><span class="icon-home">🏠</span> Home</a></li>
+            <li><a href="local.html"><span class="icon-location">📍</span> Localização</a></li>
+            <li><a href="multimedia.html"><span class="icon-camera">📷</span> Multimédia</a></li>
+            <li><a href="info.html"><span class="icon-info">📜</span> Informação</a></li>
+            <li><a href="quizz.html"><span class="icon-quiz">❓</span> Quizz</a></li>
+            <li><a href="pontosinteresse.html"><span class="icon-quiz">🤔</span> Quizz</a></li>
+
+        </ul>
+    </nav>
+
+    <form action="#" method="POST">
+        <!-- Área de dados pessoais -->
+        <fieldset>
+            <legend><b>Dados Pessoais</b></legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome" size="30" maxlength="50" autocomplete="on" autofocus><br><br>
+
+            <label for="apelido">Apelido:</label>
+            <input type="text" id="apelido" name="apelido" required placeholder="Digite seu apelido" size="30" maxlength="30" autocomplete="on"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu email" size="30" maxlength="100" autocomplete="on"><br><br>
+
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento" required><br><br>
+
+            <label for="cor-favorita">Cor Favorita:</label>
+            <input type="color" id="cor-favorita" name="cor-favorita" required><br><br>
+
+            <label for="quantidade">Quantidade de Visitantes:</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" max="100" required placeholder="Digite a quantidade" step="1"><br><br>
+
+        </fieldset>
+
+        <!-- Área de perguntas sobre a cidade -->
+        <fieldset>
+            <legend><b>Quizz</b></legend>
+            <p>1. Qual é o monumento mais famoso da cidade?</p>
+            <input type="text" name="monumento" placeholder="Escreva aqui..." required maxlength="100">
+
+            <p>2. Qual destes é o prato típico da cidade?</p>
+            <input type="radio" id="prato1" name="prato" value="A" required>
+            <label for="prato1">A) Feijoada</label>
+            <input type="radio" id="prato2" name="prato" value="B" required>
+            <label for="prato2">B) Bacalhau à Brás</label>
+            <input type="radio" id="prato3" name="prato" value="C" required>
+            <label for="prato3">C) Nenhuma das anteriores</label>
+
+            <p>3. Em que ano a cidade foi fundada?</p>
+            <select name="ano-fundacao" required>
+                <option value="1147">1147</option>
+                <option value="1755">1755</option>
+                <option value="1848">1848</option>
+            </select>
+
+            <p>4. Marque todas as atrações turísticas que já visitou em Bragança:</p>
+            <input type="checkbox" id="torre" name="atracoes" value="Torre">
+            <label for="torre">Castelo de Bragança</label><br>
+
+            <input type="checkbox" id="museu" name="atracoes" value="Museu">
+            <label for="museu">Clinica do Dr Paulo</label><br>
+
+            <input type="checkbox" id="mosteiro" name="atracoes" value="Mosteiro">
+            <label for="mosteiro">O Mercado</label><br>
+
+            <p>5. Em uma palavra, como descreveria a cidade?</p>
+            <input type="text" name="descricao" placeholder="Escreva aqui..." required maxlength="50">
+        </fieldset>
+
+        <input type="reset" value="Limpar Respostas">
+        <input type="submit" value="Enviar Respostas">
+    </form>
+
+</body>
+</html>
