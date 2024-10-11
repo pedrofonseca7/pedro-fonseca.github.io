@@ -84,3 +84,28 @@ tr:nth-child(even) {
 }
 
 
+nav {
+    background: linear-gradient(90deg, #ff5722, #e64a19); /* Gradiente de fundo */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0; /* Ajusta o espaço em cima e embaixo */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px; /* Aumenta o espaço interno */
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
+}
+
+
