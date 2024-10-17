@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Tipografias */
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.autor {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+}
+
+/* Header e Navegação */
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff8a80;
+    color: #000;
+}
+
+/* Personalização do último link */
+nav a:last-child {
+    background-color: #ff3d00;
+}
+
+nav a:link, nav a:visited {
+    color: white;
+}
+
+/* Artigos e conteúdo principal */
+main {
+    padding: 20px;
+}
+
+/* Seção de poema */
+#poema {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1f5fe;
+}
+
+#poema p {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #2e2e2e;
+}
+
+#poema .autor {
+    margin-top: 20px;
+    font-weight: 400;
+    font-style: italic;
+    color: #555;
+}
+
+/* Seção de cidades */
+#cidades {
+    background-color: #fff8e1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    padding: 5vw;
+}
+
+.cidade {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cidade img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cidade div {
+    margin-top: 10px;
+    text-align: center;
+    color: #444;
+    font-size: 14px;
+}
+#paisagem div img{
+    width: 97vw;
+
+
+}
+
+/* Footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+footer {
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
