@@ -8,7 +8,7 @@ header{
     font-family: Arial;
     position: sticky; /* o cabeçalho fica smp a vista*/
     background: #FF6347;
-    padding: 20px;
+    padding: 30px;
     /* alinhando logo e menu */
     display:flex;
     justify-content: space-between;  
@@ -16,9 +16,68 @@ header{
     margin: 0;
 }
 
-#poema{
-    text-align: center;
+
+
+#poema {
+  font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+
 }
+
+.contentor {
+  width: 100vw;
+  height: 80vh; /* Altura desejada */
+  margin: 0;
+  padding: 0;
+}
+
+.contentor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir o contêiner */
+}
+
+article#cidades{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5vw;
+  background-color: #ffa060;
+  
+}
+#cidades section{
+  display: flex;
+  margin: 10px;
+  
+  
+}
+#cidades img{
+  width:100px;
+  border-radius: 15px 0px 0px 15px;
+}
+#cidades div{
+  width: 100px;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+
+  border-radius: 0px 15px 15px 0px;
+  
+}
+
+#cidades div:hover{
+  background-color: lightgray;
+}
+
 nav ul {
     display: flex; /* flex = seguido*/
     list-style-type: none;
