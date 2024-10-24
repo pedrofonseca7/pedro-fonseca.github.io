@@ -1,0 +1,75 @@
+html{
+
+}
+body h1{
+    padding: 20px;
+    margin: 5px;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+#poema{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 100vw;
+    margin: 10px
+}
+
+#poema img{
+    height: 30vh;
+    width: 15vw;
+}
+
+
+#labs a:nth-child(even){
+    background-color: lightgrey;
+
+}
+#labs a:nth-child(odd){
+    background-color: grey;
+}
+.container{
+    display: flex;
+    gap: 20px;
+    border-radius: 4%;
+}
+
+#introducao{
+    background-color: rgb(0, 243, 243);
+    border-radius: 4%; 
+}
+#labs {
+    background-color: rgb(0, 243, 243);
+    border-radius: 4%;
+}
+
+#labs nav {
+    display: flex; /* flex = seguido*/
+    list-style-type: none;  
+}
+
+#labs nav a{
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10%;
+    margin: 0;
+}
+
+#labs a:hover {
+    background-color: #000000;
+    color: #ddd;
+}
+
+footer{
+    background-color: deepskyblue;~
+}
+
+footer p{
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+}
