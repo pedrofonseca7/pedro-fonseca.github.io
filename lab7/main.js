@@ -2,6 +2,6 @@ let counter = 0;
 const counterDisplay = document.getElementById('counter');
 
 function count() {
-  counter++;
+  countear++;
   counterDisplay.textContent = counter;
 }
