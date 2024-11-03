@@ -94,3 +94,37 @@ nav ul li a {
   nav ul li:last-child a {
     background-color: #d9b110; /* Cor de fundo diferente (tomate) para o último link */
   }
+
+  /* Estilo para o efeito parallax */
+.parallax {
+  position: relative;
+  background-image: url('URL_DA_IMAGEM'); /* Substitua 'URL_DA_IMAGEM' pela URL da imagem desejada */
+  height: 80vh; /* Altura da área parallax */
+  background-attachment: fixed; /* Efeito parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Estilo para o texto sobre a imagem */
+.parallax .text-overlay {
+  position: relative;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor legibilidade */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.parallax h2 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.parallax p {
+  font-size: 1.2em;
+}
