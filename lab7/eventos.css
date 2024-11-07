@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1d1f27;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #f8c537;
+    cursor: pointer; /* Indica que o título é interativo */
+    transition: color 0.3s; /* Suaviza a mudança de cor */
+}
+
+header h1:hover {
+    color: #ffdd57; /* Cor ao passar o mouse */
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #b3b3b3;
+}
+
+/* Seção dos Beats */
+.beats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.beat {
+    background-color: #282a36;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s; /* Suaviza as mudanças de fundo e escala */
+}
+
+.beat:hover {
+    background-color: #44475a; /* Cor ao passar o mouse */
+    transform: scale(1.02); /* Aumenta levemente ao passar o mouse */
+}
+
+.beat h2 {
+    font-size: 1.5rem;
+    color: #f8c537;
+    margin-bottom: 10px;
+}
+
+.beat audio {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.beat a {
+    color: #f8c537;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.beat a:hover {
+    color: #ffdd57;
+}
+
+/* Formulário */
+.form-section {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-section label {
+    font-size: 1.1rem;
+    color: #f8c537;
+}
+
+.form-section input[type="text"] {
+    padding: 8px;
+    border: 1px solid #44475a;
+    border-radius: 4px;
+    background-color: #282a36;
+    color: #f5f5f5;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-section input[type="text"]:focus {
+    border-color: #f8c537;
+}
+
+.form-section button {
+    padding: 10px;
+    background-color: #f8c537;
+    color: #1d1f27;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-section button:hover {
+    background-color: #ffdd57;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #b3b3b3;
+}
+
+footer a {
+    color: #f8c537;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffdd57;
+}
