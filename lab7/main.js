@@ -4,7 +4,7 @@ function changeText() {
     firstLine.textContent = "Obrigado por passares!";
 }
 function reverseText() {
-    firstLine.textContent = "Passa o mouse por aqui!";
+    firstLine.textContent = "Passa o rato por aqui!";
 }
 firstLine.addEventListener("mouseover", changeText);
 firstLine.addEventListener("mouseout", reverseText);
