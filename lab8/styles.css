@@ -1,0 +1,18 @@
+body {
+    background-color: #EAE4F2;
+    font-family: Arial, sans-serif;
+  }
+
+#1{
+    
+}
+
+  #colorText {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 0;
+    font-weight: bold;
+  }
+  #counter {
+    font-weight: bold;
+  }

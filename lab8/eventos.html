@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Beats</title>
+    <link rel="stylesheet" href="eventos.css">
+</head>
+<body>
+    <nav>
+        <h1>Menu de Navegação</h1>
+        <ul>
+            <li><a href="/lab7/index.html">Back</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1 id="title">Portfólio de Beats</h1>
+        <p>Bem-vindo ao meu portfólio! Aqui você encontra alguns dos meus beats de hip-hop. Aproveite e ouça!</p>
+    </header>
+
+    <section class="beats" id="beats-section">
+        <div class="beat" id="beat1">
+            <h2>Beat #1 - Rock x Trap</h2>
+            <audio controls>
+                <source src="beats/120 bpms F#m - beat rock x merdas mt lokas.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+            <a href="beats/120 bpms F#m - beat rock x merdas mt lokas.mp3" download>Baixar Beat</a>
+        </div>
+
+        <div class="beat" id="beat2">
+            <h2>Beat #2 - Sampled "Xanny7k - Pódio"</h2>
+            <audio controls>
+                <source src="beats/80 bpm bbminor.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+            <a href="beats/80 bpm bbminor.mp3" download>Baixar Beat</a>
+        </div>
+
+
+
+    <!-- Formulário para testes de eventos de formulário -->
+    <section class="form-section">
+        <form id="sampleForm">
+            <label for="sampleInput">Digita o teu Feeback:</label>
+            <input type="text" id="sampleInput">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Entre em contato: <a href="mailto:14recscontacto@gmail.com">14recscontacto@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript para eventos -->
+    <script src="script.js"></script>
+</body>
+</html>

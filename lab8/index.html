@@ -32,13 +32,33 @@
                 <li>Digite algo:
                     <input type="text" placeholder="Escreva aqui...">
                 </li>
-                <li>Selecione uma cor em inglês:
-                    <input type="text" placeholder="Digite a cor em inglês">
-                    <button type="submit">Enviar</button>
+                
+                
+                
+                <li>Escolha uma cor
+                    <select id="cor" name="cor" onchange="mudarCor(this)">
+                        <option value="White">White</option>
+                        <option value="Red">Red</option>
+                        <option value="Blue">Blue</option>   
+                    </select>                     
                 </li>
+        
                 <li>Contador:
                     <button id="counterButton">Clique aqui!</button>
                     <span id="counterDisplay">0</span>
+            
+                </li>
+                
+                <li>
+                    <form id="userForm">
+                        <input type="text" id="nameInput" placeholder="Insira o seu nome">
+                        <input type="text" id="ageInput" placeholder="Insira a sua idade">
+                        <button type="submit" id="submitButton">Submit</button>
+                    </form>
+                </li>
+
+                <li>Automatic Count:
+                    <span id="counterDisplay1"><span id ="counter">0</span></span>
                 </li>
             </ol>
         </section>
