@@ -1,52 +1,100 @@
-// Obtém os elementos onde os produtos serão renderizados
-const listaProdutos = document.getElementById('lista-produtos');
-const produtosEscolhidos = document.getElementById('produtos-escolhidos');
+// Seleção de elementos do DOM
+const productList = document.getElementById('product-list');
+const cartItems = document.getElementById('cart-items');
+const totalCostElement = document.getElementById('total-cost');
 
-// Função para renderizar produtos dinamicamente
-function renderizarProdutos() {
-    produtos.forEach(produto => {
-        const artigo = document.createElement('article');
-        artigo.className = 'produto';
+let cart = [];
+let totalCost = 0;
 
-        artigo.innerHTML = `
-            <img src="${produto.image}" alt="${produto.title}" class="imagem-produto">
-            <h3>${produto.title}</h3>
-            <p>${produto.description}</p>
-            <p><strong>Preço:</strong> ${produto.price.toFixed(2)}€</p>
-            <button class="btn-adicionar" data-id="${produto.id}">Adicionar ao Cesto</button>
-        `;
-
-        listaProdutos.appendChild(artigo);
-    });
-
-    configurarBotoes();
+// Inicializar a lista de produtos no localStorage, caso não exista
+if (!localStorage.getItem('produtos-selecionados')) {
+    localStorage.setItem('produtos-selecionados', JSON.stringify([]));
 }
 
-// Configura os botões "Adicionar ao Cesto"
-function configurarBotoes() {
-    const botoesAdicionar = document.querySelectorAll('.btn-adicionar');
-    botoesAdicionar.forEach(botao => {
-        botao.addEventListener('click', event => {
-            const idProduto = event.target.getAttribute('data-id');
-            const produto = produtos.find(p => p.id === parseInt(idProduto));
-            adicionarAoCesto(produto);
-        });
-    });
+// Carregar produtos e cesto ao carregar a página
+window.addEventListener("load", () => {
+    renderizarProdutos(produtos);
+    atualizarCesto();
+});
+
+// Função para renderizar a lista de produtos
+function renderizarProdutos(produtos) {
+    for (const produto of produtos) {
+        const productElement = document.createElement('li');
+        const productContent = criarElementoProduto(produto);
+        productElement.appendChild(productContent);
+        productList.appendChild(productElement);
+    }
 }
 
-// Adiciona um produto ao cesto
-function adicionarAoCesto(produto) {
-    const artigo = document.createElement('article');
-    artigo.className = 'produto-cesto';
+// Função para criar um elemento HTML de produto
+function criarElementoProduto(produto) {
+    const article = document.createElement('article');
+    const buttonAdd = document.createElement('button');
 
-    artigo.innerHTML = `
-        <img src="${produto.image}" alt="${produto.title}" class="imagem-produto">
+    buttonAdd.textContent = "Adicionar ao Cesto";
+    buttonAdd.addEventListener('click', () => {
+        adicionarProduto(produto);
+        atualizarCesto();
+    });
+
+    article.innerHTML = `
         <h3>${produto.title}</h3>
-        <p><strong>Preço:</strong>${produto.price.toFixed(2)}€</p>
+        <img src="${produto.image}" alt="${produto.title}" width="150">
+        <p>Preço: €${produto.price.toFixed(2)}</p>
+        <p>${produto.description}</p>
     `;
+    article.appendChild(buttonAdd);
 
-    produtosEscolhidos.appendChild(artigo);
+    return article;
 }
 
-// Inicializa a página carregando os produtos
-renderizarProdutos();
+// Função para adicionar um produto ao localStorage
+function adicionarProduto(produto) {
+    const storedProducts = JSON.parse(localStorage.getItem('produtos-selecionados')) || [];
+    storedProducts.push(produto);
+    localStorage.setItem('produtos-selecionados', JSON.stringify(storedProducts));
+}
+
+// Função para atualizar o conteúdo do cesto
+function atualizarCesto() {
+    const storedProducts = JSON.parse(localStorage.getItem('produtos-selecionados')) || [];
+    cartItems.innerHTML = '';
+    totalCost = 0;
+
+    storedProducts.forEach(produto => {
+        const cartItemElement = criarElementoCesto(produto);
+        cartItems.appendChild(cartItemElement);
+        totalCost += produto.price;
+    });
+
+    totalCostElement.textContent = `Custo Total: €${totalCost.toFixed(2)}`;
+}
+
+// Função para criar elementos de produtos no cesto
+function criarElementoCesto(produto) {
+    const cartItem = document.createElement('article');
+    const buttonRemove = document.createElement('button');
+
+    buttonRemove.textContent = "Remover";
+    buttonRemove.addEventListener('click', () => {
+        removerProduto(produto.id);
+        atualizarCesto();
+    });
+
+    cartItem.innerHTML = `
+        <h3>${produto.title}</h3>
+        <img src="${produto.image}" alt="${produto.title}" width="100">
+        <p>Preço: €${produto.price.toFixed(2)}</p>
+    `;
+    cartItem.appendChild(buttonRemove);
+
+    return cartItem;
+}
+
+// Função para remover um produto específico do localStorage
+function removerProduto(id) {
+    let storedProducts = JSON.parse(localStorage.getItem('produtos-selecionados')) || [];
+    storedProducts = storedProducts.filter(produto => produto.id !== id);
+    localStorage.setItem('produtos-selecionados', JSON.stringify(storedProducts));
+}
