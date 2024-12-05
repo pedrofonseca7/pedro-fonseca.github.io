@@ -109,6 +109,26 @@ function ordenar() {
 }
 
 
+function ordenar1() {
+    const ordem = ordenarPor.value;
+    const produtosOrdenados = [...produtosDisponiveis];
+    if (ordem === "asc") {
+        produtosOrdenados.sort((a, b) => a.price - b.price);
+    } else if (ordem === "desc") {
+        produtosOrdenados.sort((a, b) => b.price - a.price);
+    } else if (ordem === "rating-asc") {
+        produtosOrdenados.sort((a, b) => a.rating - b.rating);
+    } else if (ordem === "rating-desc") {
+        produtosOrdenados.sort((a, b) => b.rating - a.rating);
+    }
+    exibirProdutos(produtosOrdenados);
+}
+const botaoAdicionarTodos = document.createElement("button");
+botaoAdicionarTodos.textContent = "Adicionar Todos";
+botaoAdicionarTodos.addEventListener("click", () => {
+    produtosDisponiveis.forEach(adicionarAoCarrinho);
+});
+document.getElementById("controle").appendChild(botaoAdicionarTodos);
 
 
 

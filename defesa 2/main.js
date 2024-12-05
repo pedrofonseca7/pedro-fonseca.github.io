@@ -62,6 +62,15 @@ function adicionarAoCarrinho(produto) {
     atualizarCarrinho();
 }
 
+function removerTodos(){
+    produtos = [];
+    const cesto = document.querySelector('lista-produtos')
+
+    allProducts.forEach(produto => {
+        removerDoCarrinho(produto);
+    });
+}
+
 function atualizarCarrinho() {
     itensCarrinho.innerHTML = "";
     total = 0;
@@ -104,18 +113,18 @@ function ordenar() {
         produtosOrdenados.sort((a, b) => a.price - b.price);
     } else if (ordem === "desc") {
         produtosOrdenados.sort((a, b) => b.price - a.price);
+    }else if(ordem === "avalAsc"){
+        produtosOrdenados.sort((a, b) => a.rating - a.rating);
+    }else if(ordem === "avalDec"){
+        produtosOrdenados.sort((a, b) => b.rating - a.rating);
     }
     exibirProdutos(produtosOrdenados);
 }
 
-
-
-
-
 function buscar() {
     const termo = campoBusca.value.toLowerCase();
     const produtosEncontrados = produtosDisponiveis.filter((p) =>
-        p.title.toLowerCase().includes(termo)
+        p.title.toLowerCase().includes(termo) || p.description.toLowerCase().includes(termo)
     );
     exibirProdutos(produtosEncontrados);
 }
