@@ -67,7 +67,7 @@ function removerTodos(){
     const cesto = document.querySelector('lista-produtos')
 
     allProducts.forEach(produto => {
-        removerDoCarrinho(produto);
+        removerDoCarrinho(produtos);
     });
 }
 
